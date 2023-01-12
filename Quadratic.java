@@ -3,14 +3,17 @@ public class Quadratic {
         double a = Double.parseDouble(args[0]);
         double b = Double.parseDouble(args[1]);
         double c = Double.parseDouble(args[2]);
-        if (a == 1 ){
+        if (a == 0 ){
             System.out.println(-c/b);
-        }else if (b == 1){
-            double result1 = Math.sqrt(-c/b);
-            double result2 = -1*(Math.sqrt(-c/b));
-            System.out.println(result1 + ", " + result2);
         }else{
-            
+            double answer1 = Math.sqrt((b*b)-4*a*c);
+            answer1 = -b + answer1;
+            answer1 = answer1/(2*a);
+            System.out.println(answer1);
+            double answer2 = Math.sqrt((b*b)-4*a*c);
+            answer2 = -b - answer2;
+            answer2 = answer2/(2*a);
+            System.out.println(answer2);
         }
 
     }
